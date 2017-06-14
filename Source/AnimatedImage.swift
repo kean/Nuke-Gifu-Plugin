@@ -32,6 +32,10 @@ public class AnimatedImage: UIImage {
     public required convenience init(imageLiteralResourceName name: String) {
         fatalError("init(imageLiteral:) has not been implemented")
     }
+
+    public required init(itemProviderData data: Data, typeIdentifier: String) throws {
+        fatalError("init(itemProviderData:typeIdentifier:) has not been implemented")
+    }
 }
 
 public extension AnimatedImage {
