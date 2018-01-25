@@ -100,26 +100,21 @@ public class AnimatedImageDecoder: Nuke.DataDecoding {
 public class AnimatedImageView: UIView, Nuke.Target {
     public let imageView: Gifu.GIFImageView
     
-    public init(imageView: Gifu.GIFImageView = Gifu.GIFImageView()) {
+    public init(frame: CGRect = .zero, imageView: Gifu.GIFImageView = Gifu.GIFImageView()) {
         self.imageView = imageView
-        super.init(frame: CGRect.zero)
-        prepare()
+        super.init(frame: frame)
+        addSubview(imageView)
     }
 
     required public init?(coder aDecoder: NSCoder) {
         self.imageView = Gifu.GIFImageView()
         super.init(coder: aDecoder)
-        prepare()
-    }
-
-    /// Common init.
-    private func prepare() {
         addSubview(imageView)
-
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        for attr in [.top, .leading, .bottom, .trailing] as [NSLayoutAttribute] {
-            addConstraint(NSLayoutConstraint(item: imageView, attribute: attr, relatedBy: .equal, toItem: self, attribute: attr, multiplier: 1, constant: 0))
-        }
+    }
+    
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+        imageView.frame = bounds
     }
 
     public func prepareForReuse() {
