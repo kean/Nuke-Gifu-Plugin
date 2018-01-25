@@ -100,7 +100,7 @@ public class AnimatedImageDecoder: Nuke.DataDecoding {
 public class AnimatedImageView: UIView, Nuke.Target {
     public let imageView: Gifu.GIFImageView
     
-    public init(frame: CGRect, imageView: Gifu.GIFImageView = Gifu.GIFImageView()) {
+    public init(frame: CGRect = .zero, imageView: Gifu.GIFImageView = Gifu.GIFImageView()) {
         self.imageView = imageView
         super.init(frame: frame)
         addSubview(imageView)
