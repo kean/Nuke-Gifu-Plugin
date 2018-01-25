@@ -97,7 +97,7 @@ public class AnimatedImageDecoder: Nuke.DataDecoding {
 /// The reason why this is a standalone class and not a simple overridden method
 /// from `UIImageView` extension is because declarations from extensions
 /// cannot be overridden in Swift (yet).
-public class AnimatedImageView: UIView, Nuke.Target {
+open class AnimatedImageView: UIView, Nuke.Target {
     public let imageView: Gifu.GIFImageView
     
     public init(imageView: Gifu.GIFImageView = Gifu.GIFImageView()) {
