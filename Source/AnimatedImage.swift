@@ -7,6 +7,16 @@ import ImageIO
 import Gifu
 import Nuke
 
+extension UIImage {
+    
+    /// 'required' initializer 'init(imageLiteralResourceName:)' must be provided by subclass of 'UIImage', but
+    /// overriding non-@objc declarations from extensions is not supported. Hence this extension to workaround
+    /// the issue
+    @objc public convenience init(imageLiteralResourceName name: String) {
+        fatalError("init(imageLiteralResourceName:) has not been implemented")
+    }
+}
+
 /// Represents animated image data alongside a poster image (first image frame).
 public class AnimatedImage: UIImage {
     public let data: Data
