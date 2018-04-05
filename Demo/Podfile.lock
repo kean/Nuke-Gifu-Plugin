@@ -1,9 +1,9 @@
 PODS:
-  - Gifu (2.0.0-rc)
-  - Nuke (4.1.2)
-  - Nuke-Gifu-Plugin (0.1):
-    - Gifu (~> 2.0-rc)
-    - Nuke (~> 4.0)
+  - Gifu (3.0.0)
+  - Nuke (6.1)
+  - Nuke-Gifu-Plugin (2.0):
+    - Gifu (~> 3.0)
+    - Nuke (~> 6.0)
 
 DEPENDENCIES:
   - Nuke-Gifu-Plugin (from `../`)
@@ -13,10 +13,10 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Gifu: ba59ea30a6bb0c3a258e80b6461db76ae301039f
-  Nuke: 7cfd2acdf90c36f66e6ea40795bac0d851a9afe0
-  Nuke-Gifu-Plugin: 94cc584c8206d3e2a2e9157e8408f99b63e74151
+  Gifu: 6543ca2056a3d697097c09fe543ef49348ccc892
+  Nuke: 0513c8d156bd9a2adb15db70622c3527f44542c5
+  Nuke-Gifu-Plugin: a3b63b14ba094844d6b26b6cb9aef513ac4a0eca
 
 PODFILE CHECKSUM: db758d7765a543ed889ea018b0e82214c4c60a1c
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.4.0
