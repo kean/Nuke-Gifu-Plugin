@@ -24,14 +24,12 @@ extension Nuke.Manager {
         // Make a decoder which supports animated GIFs.
         let decoder = Nuke.DataDecoderComposition(decoders: [AnimatedImageDecoder(), Nuke.DataDecoder()])
 
-        // Updates `Cache` cost calculation block.
-        let cache = Nuke.Cache().preparedForAnimatedImages()
+        let cache = Nuke.Cache()
+        cache.prepareForAnimatedImages()
 
         var options = Nuke.Loader.Options()
-        // Disable processing of animated images.
-        options.processor = { image, request in
-            return (image.animatedImageData != nil) ? nil : request.processor
-        }
+        options.prepareForAnimatedImages()
+
         let loader = Nuke.Loader(loader: Nuke.DataLoader(), decoder: decoder, options: options)
 
         return Manager(loader: loader, cache: cache)
@@ -118,9 +116,19 @@ public class AnimatedImageView: UIView, Nuke.Target {
     }
 }
 
+public extension Nuke.Loader.Options {
+    /// Disables processing of animated images by setting `processor` closure.
+    public mutating func prepareForAnimatedImages () {
+        // Disable processing of animated images.
+        processor = { image, request in
+            return (image.animatedImageData != nil) ? nil : request.processor
+        }
+    }
+}
+
 public extension Nuke.Cache {
-    /// Updates `Cache` cost block by adding special handling of `AnimatedImage`.
-    public func preparedForAnimatedImages() -> Self {
+    /// Updates `Cache` cost closure by adding special handling of `AnimatedImage`.
+    public func prepareForAnimatedImages () {
         let cost = self.cost
         self.cost = {
             guard let data = $0.animatedImageData else {
@@ -128,6 +136,5 @@ public extension Nuke.Cache {
             }
             return cost($0) + data.count // Return cost + animated image data size.
         }
-        return self
     }
 }
