@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'Nuke-Gifu-Plugin'
-    s.version          = '2.0'
+    s.version          = '3.0'
     s.summary          = 'Gifu plugin for Nuke that allows you to load and display animated GIFs'
 
     s.homepage         = 'https://github.com/kean/Nuke-Gifu-Plugin'

@@ -3,7 +3,6 @@
 // Copyright (c) 2016-2018-2018 Alexander Grebenyuk (github.com/kean).
 
 import UIKit
-import ImageIO
 import Gifu
 import Nuke
 
