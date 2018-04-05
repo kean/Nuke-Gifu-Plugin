@@ -19,7 +19,7 @@
 		0C06D2381C11F62300CC5C35 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
 		0CCA569C1DC8A965007ECC46 /* Gifu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gifu.framework; path = Carthage/Build/iOS/Gifu.framework; sourceTree = "<group>"; };
 		0CCA569F1DC8AFDE007ECC46 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		0CCA56A11DC8AFFD007ECC46 /* Nuke-Gifu-Plugin.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Nuke-Gifu-Plugin.podspec"; sourceTree = "<group>"; };
+		0CCA56A11DC8AFFD007ECC46 /* Nuke-Gifu-Plugin.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Nuke-Gifu-Plugin.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0CCA56A21DC8B003007ECC46 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		0CCA56A31DC8B00B007ECC46 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */

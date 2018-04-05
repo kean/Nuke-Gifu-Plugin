@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2016 Alexander Grebenyuk (github.com/kean).
+// Copyright (c) 2016-2018-2018 Alexander Grebenyuk (github.com/kean).
 
 import UIKit
 import ImageIO
@@ -10,7 +10,7 @@ import Nuke
 private var _animatedImageDataAK = "Manager.Context.AssociatedKey"
 
 extension UIImage {
-    // Animated image data, not `nil` only when the data does in fact contain
+    // Animated image data. Only not `nil` when image data actually contains
     // an animated image.
     public var animatedImageData: Data? {
         get { return objc_getAssociatedObject(self, &_animatedImageDataAK) as? Data }
