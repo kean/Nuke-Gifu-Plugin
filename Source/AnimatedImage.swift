@@ -6,17 +6,7 @@ import UIKit
 import Gifu
 import Nuke
 
-private var _animatedImageDataAK = "Manager.Context.AssociatedKey"
-
-extension UIImage {
-    // Animated image data. Only not `nil` when image data actually contains
-    // an animated image.
-    public var animatedImageData: Data? {
-        get { return objc_getAssociatedObject(self, &_animatedImageDataAK) as? Data }
-        set { objc_setAssociatedObject(self, &_animatedImageDataAK, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
-    }
-}
-
+@available(*, deprecated, message: "Please see README for more info.")
 extension Nuke.Manager {
     /// `Nuke.Manager` with animated GIF support.
     public static let animatedImageManager: Nuke.Manager = {
@@ -35,11 +25,10 @@ extension Nuke.Manager {
     }()
 }
 
-/// Creates instances of `AnimatedImage` class from the given data.
-/// Returns `nil` is data doesn't contain an animated GIF.
+@available(*, deprecated, message: "Please see README for more info.")
 public class AnimatedImageDecoder: Nuke.DataDecoding {
     public init() {}
-    
+
     public func decode(data: Data, response: URLResponse) -> Nuke.Image? {
         guard self.isAnimatedGIFData(data), let image = UIImage(data: data) else {
             return nil
@@ -47,7 +36,7 @@ public class AnimatedImageDecoder: Nuke.DataDecoding {
         image.animatedImageData = data
         return image
     }
-    
+
     public func isAnimatedGIFData(_ data: Data) -> Bool {
         let sigLength = 3
         if data.count < sigLength {
@@ -59,14 +48,10 @@ public class AnimatedImageDecoder: Nuke.DataDecoding {
     }
 }
 
-/// Simple `Gifu.GIFImageView` wrapper that implement `Nuke.Target` protocol.
-///
-/// The reason why this is a standalone class and not a simple overridden method
-/// from `UIImageView` extension is because declarations from extensions
-/// cannot be overridden in Swift (yet).
-public class AnimatedImageView: UIView, Nuke.Target {
+@available(*, deprecated, message: "Please see README for more info.")
+public class AnimatedImageView: UIView {
     public let imageView: Gifu.GIFImageView
-    
+
     public init(imageView: Gifu.GIFImageView = Gifu.GIFImageView()) {
         self.imageView = imageView
         super.init(frame: CGRect.zero)
@@ -93,7 +78,10 @@ public class AnimatedImageView: UIView, Nuke.Target {
         imageView.prepareForReuse()
         imageView.image = nil
     }
-    
+}
+
+@available(*, deprecated, message: "Please see README for more info.")
+extension AnimatedImageView: Nuke.Target {
     /// Displays an image on success. Runs `opacity` transition if
     /// the response was not from the memory cache.
     public func handle(response: Result<Image>, isFromMemoryCache: Bool) {
@@ -115,6 +103,7 @@ public class AnimatedImageView: UIView, Nuke.Target {
     }
 }
 
+@available(*, deprecated, message: "Please see README for more info.")
 public extension Nuke.Loader.Options {
     /// Disables processing of animated images by setting `processor` closure.
     public mutating func prepareForAnimatedImages () {
@@ -125,6 +114,7 @@ public extension Nuke.Loader.Options {
     }
 }
 
+@available(*, deprecated, message: "Please see README for more info.")
 public extension Nuke.Cache {
     /// Updates `Cache` cost closure by adding special handling of `AnimatedImage`.
     public func prepareForAnimatedImages () {
