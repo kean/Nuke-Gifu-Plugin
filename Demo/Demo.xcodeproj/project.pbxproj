@@ -7,13 +7,125 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		039388D1E606449B2E309828 /* Pods_Nuke_Gifu_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CAB00FEC68397C9C407AF0 /* Pods_Nuke_Gifu_Demo.framework */; };
 		0C232ABF1D9196F5004CAFC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C232ABE1D9196F5004CAFC8 /* AppDelegate.swift */; };
 		0C232AC11D9196F5004CAFC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C232AC01D9196F5004CAFC8 /* ViewController.swift */; };
 		0C232AC41D9196F5004CAFC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C232AC21D9196F5004CAFC8 /* Main.storyboard */; };
 		0C232AC61D9196F5004CAFC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C232AC51D9196F5004CAFC8 /* Assets.xcassets */; };
 		0C232AC91D9196F5004CAFC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C232AC71D9196F5004CAFC8 /* LaunchScreen.storyboard */; };
+		0CA10676209C2AC600D6386B /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA1065F209C2A7400D6386B /* Nuke.framework */; };
+		0CA10677209C2AC600D6386B /* Nuke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA1065F209C2A7400D6386B /* Nuke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0CA1067A209C2AC600D6386B /* Gifu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA1064F209C2A6D00D6386B /* Gifu.framework */; };
+		0CA1067B209C2AC600D6386B /* Gifu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA1064F209C2A6D00D6386B /* Gifu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0CA1064E209C2A6D00D6386B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CA10649209C2A6D00D6386B /* Gifu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00B8C73E1A364DA400C188E7;
+			remoteInfo = Gifu;
+		};
+		0CA10650209C2A6D00D6386B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CA10649209C2A6D00D6386B /* Gifu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 009BD1361BBC7F6500FC982B;
+			remoteInfo = GifuTests;
+		};
+		0CA1065E209C2A7400D6386B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CA10652209C2A7400D6386B /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C9174901BAE99EE004A7905;
+			remoteInfo = "Nuke iOS";
+		};
+		0CA10660209C2A7400D6386B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CA10652209C2A7400D6386B /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C22DA2C1BCAA220006E1D3B;
+			remoteInfo = "Nuke macOS";
+		};
+		0CA10662209C2A7400D6386B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CA10652209C2A7400D6386B /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C22D9C51BCA9734006E1D3B;
+			remoteInfo = "Nuke watchOS";
+		};
+		0CA10664209C2A7400D6386B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CA10652209C2A7400D6386B /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CC345971BD96CFE005C2DD8;
+			remoteInfo = "Nuke tvOS";
+		};
+		0CA10666209C2A7400D6386B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CA10652209C2A7400D6386B /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C7C06771BCA882A00089D7F;
+			remoteInfo = "Nuke iOS Tests";
+		};
+		0CA10668209C2A7400D6386B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CA10652209C2A7400D6386B /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C22DA381BCAA22A006E1D3B;
+			remoteInfo = "Nuke macOS Tests";
+		};
+		0CA1066A209C2A7400D6386B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CA10652209C2A7400D6386B /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CC345A31BD96D2A005C2DD8;
+			remoteInfo = "Nuke tvOS Tests";
+		};
+		0CA1066C209C2A7400D6386B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CA10652209C2A7400D6386B /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C8D7BD01D9DBF1600D12EB7;
+			remoteInfo = "Nuke iOS Tests Host";
+		};
+		0CA1066E209C2A7400D6386B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CA10652209C2A7400D6386B /* Nuke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C8D7BE81D9DC02B00D12EB7;
+			remoteInfo = "Nuke iOS Performance Tests";
+		};
+		0CA10678209C2AC600D6386B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CA10652209C2A7400D6386B /* Nuke.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C91748F1BAE99EE004A7905;
+			remoteInfo = "Nuke iOS";
+		};
+		0CA1067C209C2AC600D6386B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CA10649209C2A6D00D6386B /* Gifu.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B8C73D1A364DA400C188E7;
+			remoteInfo = Gifu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0CA1067E209C2AC600D6386B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0CA10677209C2AC600D6386B /* Nuke.framework in Embed Frameworks */,
+				0CA1067B209C2AC600D6386B /* Gifu.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0C232ABC1D9196F5004CAFC8 /* Nuke-Gifu-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nuke-Gifu-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,19 +135,9 @@
 		0C232AC51D9196F5004CAFC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C232AC81D9196F5004CAFC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C232ACA1D9196F5004CAFC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		28CAB00FEC68397C9C407AF0 /* Pods_Nuke_Gifu_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nuke_Gifu_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AFD25F7E063686B549722E9 /* Pods_Nuke_FLAnimatedImage_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nuke_FLAnimatedImage_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F9382A8DD1F371E4165DA59 /* Pods-Nuke Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuke Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nuke Demo/Pods-Nuke Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		86980F4BF37BE7E58BD3F7CF /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8D045530D29BD0581018597 /* Pods-Nuke-Gifu-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuke-Gifu-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nuke-Gifu-Demo/Pods-Nuke-Gifu-Demo.release.xcconfig"; sourceTree = "<group>"; };
-		BE2CFE43209DF48E045EA7BB /* Pods-Nuke-FLAnimatedImage-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuke-FLAnimatedImage-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nuke-FLAnimatedImage-Demo/Pods-Nuke-FLAnimatedImage-Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		BF9DAB879AC07FF7D438B4C2 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		CA4F98B22D21BCC69907752C /* Pods-Nuke Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuke Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nuke Demo/Pods-Nuke Demo.release.xcconfig"; sourceTree = "<group>"; };
-		CFE006FA9747B0D7595611DB /* Pods-Nuke-FLAnimatedImage-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuke-FLAnimatedImage-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nuke-FLAnimatedImage-Demo/Pods-Nuke-FLAnimatedImage-Demo.release.xcconfig"; sourceTree = "<group>"; };
-		D1C764F283FAFD6FF8599B6A /* Pods_Nuke_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nuke_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CA10649209C2A6D00D6386B /* Gifu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Gifu.xcodeproj; path = ../Carthage/Checkouts/Gifu/Gifu.xcodeproj; sourceTree = "<group>"; };
+		0CA10652209C2A7400D6386B /* Nuke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nuke.xcodeproj; path = ../Carthage/Checkouts/Nuke/Nuke.xcodeproj; sourceTree = "<group>"; };
 		D41C16807F95F83FB63DA311 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D724F3D2F4988C64F2AE1624 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
-		FD30CCCEF2F4FED591815A8D /* Pods-Nuke-Gifu-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuke-Gifu-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nuke-Gifu-Demo/Pods-Nuke-Gifu-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +145,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				039388D1E606449B2E309828 /* Pods_Nuke_Gifu_Demo.framework in Frameworks */,
+				0CA10676209C2AC600D6386B /* Nuke.framework in Frameworks */,
+				0CA1067A209C2AC600D6386B /* Gifu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,28 +166,47 @@
 			path = Source;
 			sourceTree = SOURCE_ROOT;
 		};
-		2A780CB0152F4705F2EC5D09 /* Pods */ = {
+		0CA10648209C2A6400D6386B /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				6F9382A8DD1F371E4165DA59 /* Pods-Nuke Demo.debug.xcconfig */,
-				CA4F98B22D21BCC69907752C /* Pods-Nuke Demo.release.xcconfig */,
-				BF9DAB879AC07FF7D438B4C2 /* Pods-Demo.debug.xcconfig */,
-				D724F3D2F4988C64F2AE1624 /* Pods-Demo.release.xcconfig */,
-				BE2CFE43209DF48E045EA7BB /* Pods-Nuke-FLAnimatedImage-Demo.debug.xcconfig */,
-				CFE006FA9747B0D7595611DB /* Pods-Nuke-FLAnimatedImage-Demo.release.xcconfig */,
-				FD30CCCEF2F4FED591815A8D /* Pods-Nuke-Gifu-Demo.debug.xcconfig */,
-				B8D045530D29BD0581018597 /* Pods-Nuke-Gifu-Demo.release.xcconfig */,
+				0CA10652209C2A7400D6386B /* Nuke.xcodeproj */,
+				0CA10649209C2A6D00D6386B /* Gifu.xcodeproj */,
 			);
-			name = Pods;
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		0CA1064A209C2A6D00D6386B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0CA1064F209C2A6D00D6386B /* Gifu.framework */,
+				0CA10651209C2A6D00D6386B /* GifuTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0CA10653209C2A7400D6386B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0CA1065F209C2A7400D6386B /* Nuke.framework */,
+				0CA10661209C2A7400D6386B /* Nuke.framework */,
+				0CA10663209C2A7400D6386B /* Nuke.framework */,
+				0CA10665209C2A7400D6386B /* Nuke.framework */,
+				0CA10667209C2A7400D6386B /* Nuke iOS Tests.xctest */,
+				0CA10669209C2A7400D6386B /* Nuke macOS Tests.xctest */,
+				0CA1066B209C2A7400D6386B /* Nuke tvOS Tests.xctest */,
+				0CA1066D209C2A7400D6386B /* Nuke iOS Tests Host.app */,
+				0CA1066F209C2A7400D6386B /* Nuke iOS Performance Tests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				0CA10648209C2A6400D6386B /* Dependencies */,
 				0C232ABD1D9196F5004CAFC8 /* Source */,
 				607FACD11AFB9204008FA782 /* Products */,
 				B268730C38EF50AF5D1A33EC /* Frameworks */,
-				2A780CB0152F4705F2EC5D09 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,10 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				D41C16807F95F83FB63DA311 /* Pods.framework */,
-				D1C764F283FAFD6FF8599B6A /* Pods_Nuke_Demo.framework */,
-				86980F4BF37BE7E58BD3F7CF /* Pods_Demo.framework */,
-				6AFD25F7E063686B549722E9 /* Pods_Nuke_FLAnimatedImage_Demo.framework */,
-				28CAB00FEC68397C9C407AF0 /* Pods_Nuke_Gifu_Demo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,16 +233,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C232ACB1D9196F5004CAFC8 /* Build configuration list for PBXNativeTarget "Nuke-Gifu-Demo" */;
 			buildPhases = (
-				D327251DB79836F6BFC5904B /* [CP] Check Pods Manifest.lock */,
 				0C232AB81D9196F5004CAFC8 /* Sources */,
 				0C232AB91D9196F5004CAFC8 /* Frameworks */,
 				0C232ABA1D9196F5004CAFC8 /* Resources */,
-				EE68C12134618C8FFFAE424F /* [CP] Embed Pods Frameworks */,
-				A2CEA8637BAEB7979F49F937 /* [CP] Copy Pods Resources */,
+				0CA1067E209C2AC600D6386B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0CA10679209C2AC600D6386B /* PBXTargetDependency */,
+				0CA1067D209C2AC600D6386B /* PBXTargetDependency */,
 			);
 			name = "Nuke-Gifu-Demo";
 			productName = "Nuke-FLAnimatedImage-Demo";
@@ -160,12 +278,102 @@
 			mainGroup = 607FACC71AFB9204008FA782;
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0CA1064A209C2A6D00D6386B /* Products */;
+					ProjectRef = 0CA10649209C2A6D00D6386B /* Gifu.xcodeproj */;
+				},
+				{
+					ProductGroup = 0CA10653209C2A7400D6386B /* Products */;
+					ProjectRef = 0CA10652209C2A7400D6386B /* Nuke.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0C232ABB1D9196F5004CAFC8 /* Nuke-Gifu-Demo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0CA1064F209C2A6D00D6386B /* Gifu.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Gifu.framework;
+			remoteRef = 0CA1064E209C2A6D00D6386B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0CA10651209C2A6D00D6386B /* GifuTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GifuTests.xctest;
+			remoteRef = 0CA10650209C2A6D00D6386B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0CA1065F209C2A7400D6386B /* Nuke.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nuke.framework;
+			remoteRef = 0CA1065E209C2A7400D6386B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0CA10661209C2A7400D6386B /* Nuke.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nuke.framework;
+			remoteRef = 0CA10660209C2A7400D6386B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0CA10663209C2A7400D6386B /* Nuke.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nuke.framework;
+			remoteRef = 0CA10662209C2A7400D6386B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0CA10665209C2A7400D6386B /* Nuke.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nuke.framework;
+			remoteRef = 0CA10664209C2A7400D6386B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0CA10667209C2A7400D6386B /* Nuke iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Nuke iOS Tests.xctest";
+			remoteRef = 0CA10666209C2A7400D6386B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0CA10669209C2A7400D6386B /* Nuke macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Nuke macOS Tests.xctest";
+			remoteRef = 0CA10668209C2A7400D6386B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0CA1066B209C2A7400D6386B /* Nuke tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Nuke tvOS Tests.xctest";
+			remoteRef = 0CA1066A209C2A7400D6386B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0CA1066D209C2A7400D6386B /* Nuke iOS Tests Host.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Nuke iOS Tests Host.app";
+			remoteRef = 0CA1066C209C2A7400D6386B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0CA1066F209C2A7400D6386B /* Nuke iOS Performance Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Nuke iOS Performance Tests.xctest";
+			remoteRef = 0CA1066E209C2A7400D6386B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0C232ABA1D9196F5004CAFC8 /* Resources */ = {
@@ -180,64 +388,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		A2CEA8637BAEB7979F49F937 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nuke-Gifu-Demo/Pods-Nuke-Gifu-Demo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D327251DB79836F6BFC5904B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Nuke-Gifu-Demo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EE68C12134618C8FFFAE424F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Nuke-Gifu-Demo/Pods-Nuke-Gifu-Demo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Gifu/Gifu.framework",
-				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
-				"${BUILT_PRODUCTS_DIR}/Nuke-Gifu-Plugin/NukeGifuPlugin.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gifu.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NukeGifuPlugin.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nuke-Gifu-Demo/Pods-Nuke-Gifu-Demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		0C232AB81D9196F5004CAFC8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -249,6 +399,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0CA10679209C2AC600D6386B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Nuke iOS";
+			targetProxy = 0CA10678209C2AC600D6386B /* PBXContainerItemProxy */;
+		};
+		0CA1067D209C2AC600D6386B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Gifu;
+			targetProxy = 0CA1067C209C2AC600D6386B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0C232AC21D9196F5004CAFC8 /* Main.storyboard */ = {
@@ -272,7 +435,6 @@
 /* Begin XCBuildConfiguration section */
 		0C232ACC1D9196F5004CAFC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD30CCCEF2F4FED591815A8D /* Pods-Nuke-Gifu-Demo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -294,7 +456,6 @@
 		};
 		0C232ACD1D9196F5004CAFC8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8D045530D29BD0581018597 /* Pods-Nuke-Gifu-Demo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

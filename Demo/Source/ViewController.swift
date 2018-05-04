@@ -4,11 +4,21 @@
 
 import UIKit
 import Nuke
-import NukeGifuPlugin
 import Gifu
 
 private let textViewCellReuseID = "textViewReuseID"
 private let imageCellReuseID = "imageCellReuseID"
+
+extension Gifu.GIFImageView {
+    public override func display(image: Image?) {
+        prepareForReuse()
+        if let data = image?.animatedImageData {
+            animate(withGIFData: data)
+        } else {
+            self.image = image
+        }
+    }
+}
 
 class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     var imageURLs = [URL]()
@@ -80,12 +90,18 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: imageCellReuseID, for: indexPath) as! AnimatedImageCell
-            
+
+            // Do it once somewhere where you configure the app / pipelines.
+            ImagePipeline.Configuration.isAnimatedImageDataEnabled = true
+
             cell.activityIndicator.startAnimating()
-            Nuke.Manager.animatedImageManager.loadImage(with: Request(url: imageURLs[indexPath.row]), into: cell.imageView) { [weak cell] in
-                cell?.activityIndicator.stopAnimating()
-                cell?.imageView.handle(response: $0, isFromMemoryCache: $1)
-            }
+            Nuke.loadImage(
+                with: imageURLs[indexPath.row],
+                options: ImageLoadingOptions(transition: .fadeIn(duration: 0.33)),
+                into: cell.imageView,
+                completion: { [weak cell] _, _ in
+                    cell?.activityIndicator.stopAnimating()
+            })
             
             return cell
         }
@@ -103,18 +119,18 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
 }
 
 class AnimatedImageCell: UICollectionViewCell {
-    let imageView: AnimatedImageView
+    let imageView: Gifu.GIFImageView
     let activityIndicator: UIActivityIndicatorView
     
     override init(frame: CGRect) {
-        imageView = AnimatedImageView()
+        imageView = Gifu.GIFImageView()
         activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         
         super.init(frame: frame)
         
         self.backgroundColor = UIColor(white: 235.0 / 255.0, alpha: 1.0)
         
-        imageView.imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         
         contentView.addSubview(imageView)
