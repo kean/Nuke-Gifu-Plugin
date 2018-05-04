@@ -1,55 +1,53 @@
 # Nuke Gifu Plugin
 
 <p align="left">
-<img src="https://img.shields.io/cocoapods/v/Nuke-Gifu-Plugin.svg?label=version">
-<img src="https://img.shields.io/badge/supports-CocoaPods%20%7C%20Carthage-green.svg">
 <img src="https://img.shields.io/badge/platforms-iOS-lightgrey.svg">
 </p>
 
 
 [Gifu](https://github.com/kaishin/Gifu) plugin for [Nuke](https://github.com/kean/Nuke) that allows you to load and display animated GIFs. You can see it for yourself in a demo, included in the project.
 
+> **Deprecated:** Gifu is still supported, but the plugin itself is no longer necessary - you can configure Nuke to work with Gifu with 8 lines of code.
 
 ## Usage
 
-The plugin features a pre-configured `Nuke.Manager` with GIF support, and an `AnimatedImageView`:
+All you need to do to enable GIF support is set `isAnimatedImageDataEnabled` to `true` and override `display(image:)` method on `Gifu.GIFImageView`:
 
 ```swift
-let view = AnimatedImageView()
-view.prepareForReuse()
-Nuke.Manager.animatedImageManager.loadImage(with: URL(string: "http://...")!, into: view)
+ImagePipeline.Configuration.isAnimatedImageDataEnabled = true
+
+extension Gifu.GIFImageView {
+    public override func display(image: Image?) {
+        prepareForReuse()
+        if let data = image?.animatedImageData {
+            animate(withGIFData: data)
+        } else {
+            self.image = image
+        }
+    }
+}
+```
+
+After you do that, you can start using `Gifu.GIFImageView`:
+
+```swift
+let view = Gifu.GIFImageView()
+Nuke.loadImage(with: URL(string: "http://.../cat.gif")!, into: view)
 ```
 
 ## Installation
 
-### [CocoaPods](http://cocoapods.org)
-
-To install the plugin add a dependency to your Podfile:
-
-```ruby
-# source 'https://github.com/CocoaPods/Specs.git'
-# use_frameworks!
-
-pod "Nuke-Gifu-Plugin"
-```
-
-### [Carthage](https://github.com/Carthage/Carthage)
-
-To install the plugin add a dependency to your Cartfile:
-
-```
-github "kean/Nuke-Gifu-Plugin"
-```
+There is no installation required.
 
 ## Requirements
 
 - iOS 9
-- Xcode 9
-- Swift 4
+- Xcode 9.3
+- Swift 4.1
 
 ## Dependencies
 
-- [Nuke 6](https://github.com/kean/Nuke)
+- [Nuke 7](https://github.com/kean/Nuke)
 - [Gifu 3](https://github.com/kaishin/Gifu)
 
 ## License
