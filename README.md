@@ -17,7 +17,7 @@ All you need to do to enable GIF support is set `isAnimatedImageDataEnabled` to 
 ImagePipeline.Configuration.isAnimatedImageDataEnabled = true
 
 extension Gifu.GIFImageView {
-    public override func display(image: Image?) {
+    public override func nuke_display(image: Image?) {
         prepareForReuse()
         if let data = image?.animatedImageData {
             animate(withGIFData: data)
